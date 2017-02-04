@@ -1,0 +1,102 @@
+$fa-font-path: '../../node_modules/font-awesome/fonts';
+@import '../../node_modules/font-awesome/scss/font-awesome';
+@import '_variables';
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #container {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: $bg-color;
+}
+
+/****************************************
+  Components
+*****************************************/
+
+.video-list {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  padding: 20px;
+
+  .video-container {
+    margin-bottom: 20px;
+    width: 15vw;
+    height: 100%;
+
+    video {
+      cursor: pointer;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  }
+
+  .video-container.active {
+    position: fixed;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
+.action-list {
+  position: fixed;
+  z-index: 2;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+
+  .action {
+    width: 6vw;
+    height: 6vw;
+    border-radius: 3vw;
+    background-color: #fff;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vw;
+    margin: 10px;
+    cursor: pointer;
+  }
+  .action.close {
+    background-color: red;
+    color: #fff;
+  }
+}
+
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  > input {
+    background-color: #F1D302;
+    border: 0;
+    border-radius: 5px;
+    padding: 1em;
+    color: #000;
+    font-size: 1em;
+    cursor: pointer;
+  }
+}
