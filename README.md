@@ -1,6 +1,8 @@
-# WebRTC-P2P
+# webrtc-p2p
 
 A multiparty conferencing application built with WebRTC (P2P), React, Redux.
+
+[__DEMO__](https://thawing-retreat-51046.herokuapp.com/)
 
 ## Set Up
 ```
